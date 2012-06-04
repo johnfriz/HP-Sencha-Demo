@@ -4,6 +4,7 @@
 var stock=require("./stock.js");
 
 function getStockInfo(param, callback) {
+  $fh.stats.inc("getStockInfo");
   return stock.getStockInfo(param.name, callback);
 }
 
@@ -11,6 +12,7 @@ function getStockInfo(param, callback) {
  * Payment
  */ 
 function payment(params,callback) {
+  $fh.stats.inc("payment");
   var cardType   = params.cardType;
   var cardNumber = params.cardNumber;
   var url = "http://www.webservicex.net/CreditCard.asmx/ValidateCardNumber?cardType=" + cardType + "&cardNumber=" + cardNumber;
@@ -27,6 +29,7 @@ function payment(params,callback) {
  * Twitter
  */
 function getTweets(params,callback) {
+  $fh.stats.inc("getTweets");
   var username   = 'hpcloud';
   var num_tweets = 10;
   var url        = 'http://search.twitter.com/search.json?q=' + username;
