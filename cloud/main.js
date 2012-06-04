@@ -107,7 +107,7 @@ function cachePoints(hash, data) {
 }
 
 function getPoints(params,callback) {
-  
+  $fh.stats.inc("getPoints");
   var response = {};
   getCachedPoints({}, function(err, res) {
     console.log('getCachedPoints :: err = ', err, ' :: res = ', res);
