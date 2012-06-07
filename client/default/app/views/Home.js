@@ -6,7 +6,7 @@ app.views.Home = Ext.extend(Ext.Panel, {
   	{
   		dock: 'top',
   		xtype: 'toolbar',
-  		title: '<img class="logo" src="app/images/logo1.png" />',
+  		title: '<img class="logo" src="app/images/logo.png" />',
       ui: 'light'
   	}
   ],
