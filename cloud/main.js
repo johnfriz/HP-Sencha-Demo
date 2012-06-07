@@ -4,6 +4,7 @@
 var stock=require("./stock.js");
 
 function getStockInfo(param, callback) {
+  console.log('getStockInfo');
   $fh.stats.inc("getStockInfo");
   return stock.getStockInfo(param.name, callback);
 }
@@ -12,6 +13,7 @@ function getStockInfo(param, callback) {
  * Payment
  */ 
 function payment(params,callback) {
+  console.log('payment');
   $fh.stats.inc("payment");
   var cardType   = params.cardType;
   var cardNumber = params.cardNumber;
@@ -65,6 +67,7 @@ var MARKERS = {
 };
 
 function getMarkers(params) {
+  console.log('getMarkers : params = ', params);
   // Default to markers around Las Vegas
   var res = MARKERS;
   if( params.lat && params.lon ) {
@@ -83,21 +86,27 @@ function getMarkers(params) {
 }
 
 function getCachedPoints(params,callback) {
+  console.log('getCachedPoints : loading cached data...');
   $fh.cache({
     "act": "load",
     "key": "points"
   },function(err,res){
+    console.log('getCachedPoints : result of loading cached data = ', data);
     callback(err,res);
   });
   
 }
 
 function cachePoints(hash, data) {
+  
   var obj = {
     "hash": hash,
     "data": data,
     "cached": true
   };
+  
+  console.log('cachePoints : caching data ', obj);
+  
   $fh.cache({
     "act": "save",
     "key": "points",
@@ -109,6 +118,7 @@ function cachePoints(hash, data) {
 }
 
 function getPoints(params,callback) {
+  console.log('getPoints');
   $fh.stats.inc("getPoints");
   var response = {};
   getCachedPoints({}, function(err, res) {
