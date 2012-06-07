@@ -26,7 +26,7 @@ app.controllers.stocks = new Ext.Controller({
       //Empty the company field
       Ext.getCmp("companyName").setValue();
 
-    },function(err){
+    },function(msg, err){
       mask.hide();
       alert(err);
       Ext.Msg.alert('Error', 'An error has occurred with your request. Please try again.', Ext.emptyFn);
