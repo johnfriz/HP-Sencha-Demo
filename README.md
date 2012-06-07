@@ -6,7 +6,7 @@ This app demonstraits deploying a FeedHenry application into the Stackato Sandbo
 
 Both the FeedHenry platform (https://hpcs.feedhenry.com) and the Stackato Sandbox (https://api.stackato.ddns.us) are running on the HP Cloud 
 
-![](https://github.com/feedhenry/HP-Sencha-Demo/raw/stackato/docs/HomeView.png)
+![](https://github.com/johnfriz/HP-Sencha-Demo/raw/stackato/docs/HomeView.png)
 
 ## Setup
 1. Clone this app into the hpcs.feedhenry.com studio (See https://vimeo.com/42889556 for more info on how to clone the app) 
