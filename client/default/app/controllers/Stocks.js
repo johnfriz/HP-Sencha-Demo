@@ -28,6 +28,7 @@ app.controllers.stocks = new Ext.Controller({
 
     },function(err){
       mask.hide();
+      alert(err);
       Ext.Msg.alert('Error', 'An error has occurred with your request. Please try again.', Ext.emptyFn);
     });
   }
