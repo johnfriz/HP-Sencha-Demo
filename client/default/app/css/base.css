@@ -4,3 +4,8 @@
 .logoOffset {
 	margin-left: 30px;
 }
+
+.x-toolbar {
+  background-color: #fff;
+  background-image: none;
+}
