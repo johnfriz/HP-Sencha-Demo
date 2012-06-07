@@ -30,7 +30,7 @@ function payment(params,callback) {
  */
 function getTweets(params,callback) {
   console.log('getTweets');
-  console.error('getTweets - console.error');
+  //console.error('getTweets - console.error');
   $fh.stats.inc("getTweets");
   var username   = 'hpcloud';
   var num_tweets = 10;
