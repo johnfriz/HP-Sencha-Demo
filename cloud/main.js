@@ -34,7 +34,7 @@ function getTweets(params,callback) {
   console.log('getTweets');
   //console.error('getTweets - console.error');
   $fh.stats.inc("getTweets");
-  var username   = 'hpcloud';
+  var username   = 'activestate';
   var num_tweets = 10;
   var url        = 'http://search.twitter.com/search.json?q=' + username;
 
