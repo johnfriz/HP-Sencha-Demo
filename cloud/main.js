@@ -1,5 +1,5 @@
 /*
- * Stocks
+ * Stocks foo
  */
 var stock=require("./stock.js");
 
