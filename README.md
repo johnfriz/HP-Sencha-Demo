@@ -1,4 +1,4 @@
-#Test 123 Introduction to Sencha Touch
+#Introduction to Sencha Touch
 
 ## Overview
 
